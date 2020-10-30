@@ -200,11 +200,19 @@ example-learn-6764b9858-8g578            1/1     Running   0          18s
 example-learn-6764b9858-mjq4c            1/1     Running   0          18s
 example-learn-6764b9858-x78bw            1/1     Running   0          18s
 operator-demo-5f64bd68dc-slmkv           1/1     Running   7          13m46s
+
+
+## 查看自定义类型Learn
+➜  ~ kubectl get Learn
+NAME            AGE
+example-learn   34s
+
 ```
+
 
 **CR功能演示**
 
-直接修改 `kind: Learn` && `metadata.name: example-learn` 这个对象
+直接修改 `kind: Learn` && `metadata.name: example-learn` 这个我们自定义CR对象Learn:
 
 ```bash
 ➜  ~ kubectl edit learn example-learn
